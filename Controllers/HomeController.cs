@@ -1,4 +1,5 @@
-﻿using EBikeRentalsApp.Models;
+﻿using EBikeRentalsApp.Data;
+using EBikeRentalsApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -12,6 +13,7 @@ namespace EBikeRentalsApp.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+      
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -33,5 +35,7 @@ namespace EBikeRentalsApp.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        
     }
 }
