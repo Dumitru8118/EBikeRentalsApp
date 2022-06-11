@@ -1,6 +1,7 @@
 //using EBikeRentalsApp.Data;
 using EBikeRentalsApp.DbAccessLayer;
 using EBikeRentalsApp.Models;
+using EBikeRentalsApp.Repository.Bikes;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -35,8 +36,8 @@ namespace EBikeRentalsApp
             //services.AddSingleton<IBikeData, BikeData>();
 
             //services.AddSingleton(new DatabaseConfig { Name = Configuration["DefaultConnection"] });
-            services.AddScoped<IGenericRepository<BikeModel>, GenericRepository<BikeModel>>();
-
+            //services.AddScoped<IGenericRepository<BikeModel>, GenericRepository<BikeModel>>();
+            services.AddScoped<IBikesRepository<BikeModel>, BikesRepository<BikeModel>>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
