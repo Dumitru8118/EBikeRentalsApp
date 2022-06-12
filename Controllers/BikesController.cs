@@ -1,8 +1,6 @@
 ﻿using Dapper;
-using EBikeRentalsApp.Data;
-using EBikeRentalsApp.DbAccessLayer;
-using EBikeRentalsApp.Models;
-using EBikeRentalsApp.Repository.Bikes;
+using EBikeRentalsApp.DataAccessLayer.Models;
+using EBikeRentalsApp.DataAccessLayer.Repository.Bikes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
@@ -52,13 +50,9 @@ namespace EBikeRentalsApp.Controllers
         public async Task<ActionResult> AddBike(BikeModel bike)
         {
             try 
-            {
-                var parameters = new DynamicParameters();
-                parameters.Add("id", bike.id, DbType.String);
-                parameters.Add("bikeTypes", bike.bikeTypes, DbType.String);
-                parameters.Add("register_date", bike.register_date, DbType.String);
 
-                await _bikeRepository.InsertBike(parameters);
+            {
+                await _bikeRepository.AddBike(bike);
                 return Ok("201");
             }
             catch (Exception ex)

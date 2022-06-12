@@ -1,7 +1,9 @@
-//using EBikeRentalsApp.Data;
-using EBikeRentalsApp.DbAccessLayer;
-using EBikeRentalsApp.Models;
-using EBikeRentalsApp.Repository.Bikes;
+//using EBikeRentalsApp.Data
+
+
+using EBikeRentalsApp.DataAccessLayer.Models;
+using EBikeRentalsApp.DataAccessLayer.Repository;
+using EBikeRentalsApp.DataAccessLayer.Repository.Bikes;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;

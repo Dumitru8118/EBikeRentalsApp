@@ -13,10 +13,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ModelsDto\" />
     <Folder Include="HelpersAndExtensions\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EBikeRentalsApp.DataAccessLayer\EBikeRentalsApp.DataAccessLayer.csproj" />
   </ItemGroup>
 
 </Project>

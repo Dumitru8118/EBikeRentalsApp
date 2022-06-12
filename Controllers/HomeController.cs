@@ -1,5 +1,5 @@
-﻿using EBikeRentalsApp.Data;
-using EBikeRentalsApp.Models;
+﻿
+using EBikeRentalsApp.DataAccessLayer.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
