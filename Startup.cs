@@ -38,7 +38,7 @@ namespace EBikeRentalsApp
             //services.AddSingleton<IBikeData, BikeData>();
 
             //services.AddSingleton(new DatabaseConfig { Name = Configuration["DefaultConnection"] });
-            //services.AddScoped<IGenericRepository<BikeModel>, GenericRepository<BikeModel>>();
+            services.AddScoped<IGenericRepository<BikeModel>, GenericRepository<BikeModel>>();
             services.AddScoped<IBikesRepository<BikeModel>, BikesRepository<BikeModel>>();
         }
 
