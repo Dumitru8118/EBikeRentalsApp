@@ -21,7 +21,6 @@ namespace EBikeRentalsApp.Controllers
     {
         //private readonly IBikeData _bikeData;
 
-        private readonly IBikesRepository<BikeModel> _bikeRepository;
         private readonly IGenericRepository<BikeModel> _genericRepository;
 
         //private readonly ILogger<BikesController> _logger;
@@ -29,7 +28,6 @@ namespace EBikeRentalsApp.Controllers
             IGenericRepository<BikeModel> genericRepository)
         {
             //_logger = logger;
-            _bikeRepository = bikeRepository;
             _genericRepository = genericRepository;
         }
 
@@ -72,7 +70,14 @@ namespace EBikeRentalsApp.Controllers
         {
             try 
             {
-                await _bikeRepository.AddBike(bike);
+                var parameters = new DynamicParameters();
+                parameters.Add("bikeId", bike.id, DbType.String);
+                parameters.Add("bikeTypeId", bike.bikeTypes, DbType.String);
+                parameters.Add("register_date", bike.register_date, DbType.String);
+
+                var spname = "dbo.sp_InsertBikes";
+
+                await _genericRepository.AddEntity(bike, spname, parameters);
                 return Ok("201");
             }
             catch (Exception ex)

@@ -5,7 +5,9 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EBikeRentalsApp", "EBikeRentalsApp.csproj", "{DD83A52B-8E3B-4AA1-99E0-916C54599523}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBikeRentalsApp.DataAccessLayer", "..\EBikeRentalsApp.DataAccessLayer\EBikeRentalsApp.DataAccessLayer.csproj", "{6485FA49-6BF5-4530-8C6E-AA12F5FDE86C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EBikeRentalsApp.DataAccessLayer", "..\EBikeRentalsApp.DataAccessLayer\EBikeRentalsApp.DataAccessLayer.csproj", "{6485FA49-6BF5-4530-8C6E-AA12F5FDE86C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBikeRentalsApp.BusinessLogicLayer", "..\EBikeRentalsApp.BusinessLogicLayer\EBikeRentalsApp.BusinessLogicLayer.csproj", "{C6B767CC-398D-43C4-9BFD-3BF08E61869A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6485FA49-6BF5-4530-8C6E-AA12F5FDE86C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6485FA49-6BF5-4530-8C6E-AA12F5FDE86C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6485FA49-6BF5-4530-8C6E-AA12F5FDE86C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6B767CC-398D-43C4-9BFD-3BF08E61869A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6B767CC-398D-43C4-9BFD-3BF08E61869A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6B767CC-398D-43C4-9BFD-3BF08E61869A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6B767CC-398D-43C4-9BFD-3BF08E61869A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
